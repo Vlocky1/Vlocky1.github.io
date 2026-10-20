@@ -1,113 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Reboxed — Comme Rekordbox, mais en mieux</title>
-<meta name="description" content="Logiciel DJ gratuit et open source pour Windows : decks avec jogs, stems par IA, export sur clé pour CDJ, import rekordbox, ton contrôleur comme dans rekordbox.">
-<meta property="og:title" content="Reboxed — Comme Rekordbox, mais en mieux">
-<meta property="og:description" content="Logiciel DJ gratuit et open source pour Windows : decks, stems par IA, export CDJ.">
-<meta property="og:image" content="assets/shots/01-performance.webp">
-<meta name="theme-color" content="#08080b">
-<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=20">
+<meta charset="utf-8">
+<title>Reboxed a déménagé</title>
+<link rel="canonical" href="https://reboxed.github.io/">
+<meta http-equiv="refresh" content="0; url=https://reboxed.github.io/">
+<script>location.replace('https://reboxed.github.io/' + location.search + location.hash);</script>
+<style>body{background:#0b0b0d;color:#ddd;font:16px system-ui,sans-serif;display:grid;place-items:center;height:100vh;margin:0}a{color:#3d8dff}</style>
 </head>
-<body>
-<header class="hero">
-  <canvas id="heroWave"></canvas>
-  <div class="container" style="position:relative">
-    <span class="pill"><b>v<span data-version></span></b> Gratuit · open source · Windows</span>
-    <h1><span class="line"><span>Comme Rekordbox.</span></span><span class="line"><span class="grad">Mais en mieux.</span></span></h1>
-    <p class="lead">Le logiciel DJ gratuit et libre : decks avec jogs, stems par IA, export pour CDJ.</p>
-    <div class="hero-ctas">
-      <a class="btn btn-primary magnetic" data-download href="telecharger.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v12m-5-5 5 5 5-5M4 19h16"/></svg>Télécharger pour Windows</a>
-      <a class="btn btn-ghost magnetic" href="#demo">▶ Écouter la démo</a>
-    </div>
-    <p class="hero-meta">Windows 10 / 11 · 64 bits · 127 Mo</p>
-  </div>
-  <div class="stage">
-    <div class="screen"><div class="bar"><i></i><i></i><i></i><span>Reboxed — mode PERFORMANCE</span></div><img src="assets/shots/01-performance.webp" alt="Reboxed : deux decks avec jogs"><span class="scan"></span></div>
-    <p class="caption">Capture réelle de Reboxed.</p>
-  </div>
-  <div class="container">
-    <div class="stats">
-      <div class="stat reveal"><b data-count="4">0</b><span>stems par IA</span></div>
-      <div class="stat reveal d1"><b data-count="16">0</b><span>Beat FX</span></div>
-      <div class="stat reveal d2"><b data-count="16">0</b><span>hot cues</span></div>
-      <div class="stat reveal d3"><b data-count="16">0</b><span>slots de sampler</span></div>
-      <div class="stat reveal d2"><b data-count="8">0</b><span>thèmes</span></div>
-      <div class="stat reveal d3"><b data-count="100" data-suffix=" %">0</b><span>open source</span></div>
-    </div>
-  </div>
-  <div class="marquee"><div class="marquee-in" id="marquee"></div></div>
-</header>
-
-<section id="demo">
-  <div class="container">
-    <div class="center reveal">
-      <span class="eyebrow">Démo en direct</span>
-      <h2>Coupe la voix. <span class="grad">En plein mix.</span></h2>
-      <p class="lead">Les vrais stems calculés par Reboxed. Essaie.</p>
-    </div>
-    <div data-stems-player></div>
-    <p class="center reveal" style="margin-top:22px"><a class="link-more" href="stems.html">Comment ça marche</a></p>
-  </div>
-</section>
-
-<section class="scrolltext-wrap">
-  <div class="container">
-    <p class="scrolltext">Gratuit. Sans compte. Sans abonnement. Tout ce que tu fais dans rekordbox, avec ton contrôleur, en open source. Reboxed appartient à ceux qui mixent avec.</p>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="center reveal"><span class="eyebrow">L'essentiel</span><h2>Tout pour mixer.</h2></div>
-    <div class="tiles">
-      <a class="tile reveal" href="fonctionnalites.html#decks">
-        <div class="t-text"><span class="eyebrow">Decks</span><h3>Des jogs qui tournent</h3><p>BPM et calibres au centre du jog, 16 hot cues, sync, scratch.</p></div>
-        <div class="t-img"><img src="assets/shots/22-song-loaded.webp" alt="Deux decks avec jogs" loading="lazy"></div>
-      </a>
-      <a class="tile reveal d1" href="fonctionnalites.html#telechargement">
-        <div class="t-text"><span class="eyebrow">Noms</span><h3>Des titres propres</h3><p>Le nettoyeur enlève « (Official Video) », « Lyrics », « - Topic »… et sépare artiste et titre.</p></div>
-        <div class="t-img"><img src="assets/shots/09-clean-names.webp" alt="Nettoyeur de noms" loading="lazy"></div>
-      </a>
-      <a class="tile reveal" href="materiel.html#cdj">
-        <div class="t-text"><span class="eyebrow">CDJ</span><h3>Joue sur CDJ</h3><p>Une clé USB prête pour les lecteurs Pioneer, cues colorées comprises.</p></div>
-        <div class="t-img"><img src="assets/shots/21-cdj-export.webp" alt="Export CDJ" loading="lazy"></div>
-      </a>
-      <a class="tile reveal d1" href="fonctionnalites.html#tags">
-        <div class="t-text"><span class="eyebrow">Tags</span><h3>Une collection propre</h3><p>Genres, titres et artistes depuis Deezer et Spotify, en masse.</p></div>
-        <div class="t-img"><img src="assets/shots/11-autotag-review.webp" alt="Auto-tag" loading="lazy"></div>
-      </a>
-    </div>
-    <p class="center reveal" style="margin-top:34px"><a class="link-more" href="fonctionnalites.html">Toutes les fonctionnalités</a></p>
-  </div>
-</section>
-
-<section>
-  <div class="container center">
-    <div class="reveal"><span class="eyebrow">Thèmes</span><h2>À tes couleurs.</h2></div>
-    <div class="themes-ui reveal" id="themesUi">
-      <button data-shot="01-performance" data-accent="#1473eb" data-accent2="#3d8dff" class="on"><i style="background:#1473eb"></i>Reboxed Dark</button>
-      <button data-shot="14-theme-midnight" data-accent="#19b5d8" data-accent2="#5fd4ee"><i style="background:#19b5d8"></i>Midnight</button>
-      <button data-shot="15-theme-neon" data-accent="#d43dff" data-accent2="#e57dff"><i style="background:#d43dff"></i>Neon</button>
-      <button data-shot="16-theme-ember" data-accent="#e8762b" data-accent2="#ff9d5c"><i style="background:#e8762b"></i>Ember</button>
-    </div>
-    <figure class="shot tilt theme-frame reveal d1" data-full="assets/shots/13-appearance.webp" data-cap="Préférences ▸ Appearance"><img id="themeImg" src="assets/shots/01-performance.webp" alt="Thèmes" loading="lazy"><img id="themeImgNext" class="next" alt=""><span class="glare"></span></figure>
-  </div>
-</section>
-
-<section class="final">
-  <div class="container reveal">
-    <h2>Ta musique.<br><span class="grad">Ton logiciel.</span></h2>
-    <p class="lead" style="margin:18px auto 34px">Gratuit, sans compte, sans abonnement.</p>
-    <a class="btn btn-primary magnetic" data-download href="telecharger.html">Télécharger Reboxed</a>
-  </div>
-</section>
-<script src="assets/site.js?v=20"></script>
-<script src="assets/stems-player.js?v=20"></script>
-</body>
+<body><p>Le site de Reboxed est maintenant sur <a href="https://reboxed.github.io/">reboxed.github.io</a>.</p></body>
 </html>
